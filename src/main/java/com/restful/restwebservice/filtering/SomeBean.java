@@ -1,17 +1,13 @@
 package com.restful.restwebservice.filtering;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.annotation.JsonFilter;
 
-//@JsonIgnoreProperties("field1") // Ignoring on class level.
-//@JsonIgnoreProperties({"field1", "field2"}) // Ignoring on class level two fields.
+@JsonFilter("SomeBeanFilter") // Dynamic filter
 public class SomeBean {
     private String field1;
 
-    //@JsonIgnore // Static filtering - ignoring this field from response.
     private String field2;
 
-    @JsonIgnore // Static filtering - ignoring this field from response.
     private String field3;
 
 
