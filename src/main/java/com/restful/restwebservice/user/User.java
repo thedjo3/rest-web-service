@@ -1,5 +1,6 @@
 package com.restful.restwebservice.user;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import jakarta.validation.constraints.Past;
 import jakarta.validation.constraints.Size;
 
@@ -9,9 +10,11 @@ public class User {
     private Integer id;
 
     @Size(min = 2)
+    @JsonProperty("user_name") // Customize field names in response.
     private String name;
 
     @Past
+    @JsonProperty("birth_date") // Customize field names in response.
     private LocalDate birthDate;
 
 
