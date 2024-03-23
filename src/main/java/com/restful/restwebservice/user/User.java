@@ -11,16 +11,19 @@ import java.time.LocalDate;
 
 @Entity(name = "user_details")
 public class User {
+
+    protected User () {}
+
     @Id
     @GeneratedValue
     private Integer id;
 
     @Size(min = 2)
-    @JsonProperty("user_name") // Customize field names in response.
+    //@JsonProperty("user_name") // Customize field names in response.
     private String name;
 
     @Past
-    @JsonProperty("birth_date") // Customize field names in response.
+    //@JsonProperty("birth_date") // Customize field names in response.
     private LocalDate birthDate;
 
 
